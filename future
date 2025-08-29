@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future - Crypto Trading Bots</title>
+    <style>
+        /* Reset & basic styles */
+        * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+        body {background: #0f111a; color: #f0f0f0;}
+        a {text-decoration: none; color: inherit;}
+        button {cursor: pointer; border: none; border-radius: 5px; padding: 10px 20px; font-weight: bold;}
+        
+        /* Header */
+        header {
+            background: #1a1c2b;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {color: #00ffe0; letter-spacing: 2px;}
+        nav a {margin-left: 25px; color: #fff; transition: 0.3s;}
+        nav a:hover {color: #00ffe0;}
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(120deg, #1a1c2b, #141526);
+        }
+        .hero h2 {font-size: 3em; color: #00ffe0; margin-bottom: 20px;}
+        .hero p {font-size: 1.2em; margin-bottom: 30px; color: #aaa;}
+        .hero button {background: #00ffe0; color: #0f111a;}
+        
+        /* Products Section */
+        .products {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 50px;}
+        .product-card {
+            background: #1a1c2b;
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        .product-card:hover {transform: translateY(-5px);}
+        .product-card h3 {color: #00ffe0; margin-bottom: 15px;}
+        .product-card p {color: #ccc; margin-bottom: 20px;}
+        .product-card button {background: #00ffe0; color: #0f111a;}
+        
+        /* Stats Section */
+        .stats {background: #141526; display: flex; justify-content: space-around; padding: 50px; text-align: center; flex-wrap: wrap;}
+        .stat {margin: 20px;}
+        .stat h3 {font-size: 2em; color: #00ffe0; margin-bottom: 10px;}
+        .stat p {color: #ccc;}
+        
+        /* Footer */
+        footer {
+            background: #1a1c2b;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Future</h1>
+        <nav>
+            <a href="#products">Bots</a>
+            <a href="#stats">Stats</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Automated Crypto Trading Bots</h2>
+        <p>Maximize your profits with our smart, easy-to-use trading bots. Start trading 24/7!</p>
+        <button>Get Started</button>
+    </section>
+
+    <section class="products" id="products">
+        <div class="product-card">
+            <h3>FutureBot Alpha</h3>
+            <p>High-frequency trading bot for BTC & ETH. Optimized for quick gains.</p>
+            <button>Pay with Crypto</button>
+        </div>
+        <div class="product-card">
+            <h3>FutureBot Beta</h3>
+            <p>Smart swing trading bot. Ideal for medium-term crypto strategies.</p>
+            <button>Pay with Crypto</button>
+        </div>
+        <div class="product-card">
+            <h3>FutureBot Gamma</h3>
+            <p>Beginner-friendly bot. Safe, automated trading with minimal setup.</p>
+            <button>Pay with Crypto</button>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="stat">
+            <h3 id="visits">0</h3>
+            <p>Daily Visitors</p>
+        </div>
+        <div class="stat">
+            <h3 id="sales">0</h3>
+            <p>Recent Sales</p>
+        </div>
+        <div class="stat">
+            <h3>24/7</h3>
+            <p>Active Trading</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        &copy; 2025 Future Trading Bots. All rights reserved.
+    </footer>
+
+    <script>
+        // Fake stats counter
+        let visits = 1234;
+        let sales = 56;
+        function updateStats() {
+            visits += Math.floor(Math.random() * 20); // increase randomly
+            sales += Math.floor(Math.random() * 2);   // increase randomly
+            document.getElementById('visits').innerText = visits;
+            document.getElementById('sales').innerText = sales;
+        }
+        setInterval(updateStats, 5000); // update every 5 seconds
+        updateStats();
+    </script>
+</body>
+</html>
